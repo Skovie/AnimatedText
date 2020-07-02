@@ -1,0 +1,11 @@
+framework module AnimatedText {
+  umbrella header "AnimatedText.h"
+
+  export *
+  module * { export * }
+}
+
+module AnimatedText.Swift {
+    header "AnimatedText-Swift.h"
+    requires objc
+}

@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="AnimatedText_Example" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="L3a-lz-N5T">
+                                <rect key="frame" x="44" y="134" width="298" height="51"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="51" id="RW8-N8-qbb"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="26"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="wBf-1n-GSb">
+                                <rect key="frame" x="43" y="319" width="298" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="j5G-ms-e3l" customClass="AnimatedTextUITextView" customModule="AnimatedText">
+                                <rect key="frame" x="43" y="476" width="298" height="143"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="umv-At-fGe">
+                                <rect key="frame" x="43" y="392" width="155" height="36"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="Animate TextField"/>
+                                <connections>
+                                    <action selector="AnimateTextField" destination="BYZ-38-t0r" eventType="touchUpInside" id="e25-FS-gRc"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6zc-MY-07J">
+                                <rect key="frame" x="44" y="221" width="125" height="36"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="Animate Label"/>
+                                <connections>
+                                    <action selector="AnimateLbl" destination="BYZ-38-t0r" eventType="touchUpInside" id="9h1-Lj-waz"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eem-VR-a7X">
+                                <rect key="frame" x="34" y="635" width="346" height="36"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="Animate TextView without any wrapping"/>
+                                <connections>
+                                    <action selector="startTyping:" destination="BYZ-38-t0r" eventType="touchUpInside" id="BaF-oW-ewF"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BOL-Gi-jq4">
+                                <rect key="frame" x="20" y="701" width="374" height="36"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="Animate TextView wrapping words by &quot; &quot;"/>
+                                <connections>
+                                    <action selector="startTypingWithDelimiter:" destination="BYZ-38-t0r" eventType="touchUpInside" id="k9W-L9-UuX"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="wBf-1n-GSb" secondAttribute="trailing" constant="73" id="EYP-MN-FMK"/>
+                            <constraint firstItem="umv-At-fGe" firstAttribute="leading" secondItem="j5G-ms-e3l" secondAttribute="leading" id="GmA-kF-9qj"/>
+                            <constraint firstItem="eem-VR-a7X" firstAttribute="top" secondItem="j5G-ms-e3l" secondAttribute="bottom" constant="16" id="HKf-wV-zvO"/>
+                            <constraint firstItem="BOL-Gi-jq4" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="HhS-lZ-oxF"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="umv-At-fGe" secondAttribute="trailing" symbolic="YES" id="LYv-DB-X58"/>
+                            <constraint firstItem="BOL-Gi-jq4" firstAttribute="top" secondItem="eem-VR-a7X" secondAttribute="bottom" constant="30" id="Lqf-m8-jMT"/>
+                            <constraint firstItem="eem-VR-a7X" firstAttribute="centerX" secondItem="BOL-Gi-jq4" secondAttribute="centerX" id="Ta9-VY-z03"/>
+                            <constraint firstItem="j5G-ms-e3l" firstAttribute="top" secondItem="umv-At-fGe" secondAttribute="bottom" constant="48" id="U5V-sD-auW"/>
+                            <constraint firstItem="L3a-lz-N5T" firstAttribute="leading" secondItem="6zc-MY-07J" secondAttribute="leading" id="UK8-ok-SzI"/>
+                            <constraint firstItem="umv-At-fGe" firstAttribute="top" secondItem="wBf-1n-GSb" secondAttribute="bottom" constant="39" id="UiM-kJ-hsa"/>
+                            <constraint firstItem="wBf-1n-GSb" firstAttribute="leading" secondItem="umv-At-fGe" secondAttribute="leading" id="Vpi-li-7fh"/>
+                            <constraint firstItem="L3a-lz-N5T" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="44" id="Yjq-7O-9mn"/>
+                            <constraint firstItem="6zc-MY-07J" firstAttribute="top" secondItem="L3a-lz-N5T" secondAttribute="bottom" constant="36" id="ZdP-Ps-ssu"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="L3a-lz-N5T" secondAttribute="trailing" constant="72" id="f5L-rX-rBB"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="6zc-MY-07J" secondAttribute="trailing" symbolic="YES" id="jR9-LO-buK"/>
+                            <constraint firstItem="wBf-1n-GSb" firstAttribute="trailing" secondItem="j5G-ms-e3l" secondAttribute="trailing" id="k1y-aw-P89"/>
+                            <constraint firstItem="eem-VR-a7X" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="lWc-HK-2lb"/>
+                            <constraint firstItem="wBf-1n-GSb" firstAttribute="top" secondItem="6zc-MY-07J" secondAttribute="bottom" constant="62" id="n7W-43-YFA"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="BOL-Gi-jq4" secondAttribute="bottom" constant="125" id="ngD-ia-YkP"/>
+                            <constraint firstItem="wBf-1n-GSb" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="43" id="nwL-qm-uPW"/>
+                            <constraint firstItem="L3a-lz-N5T" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="90" id="pqS-Nj-hTl"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="textField" destination="wBf-1n-GSb" id="fmp-4p-wgJ"/>
+                        <outlet property="textLbl" destination="L3a-lz-N5T" id="Ekd-aN-Xwp"/>
+                        <outlet property="textview" destination="j5G-ms-e3l" id="aOr-8A-lDy"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="137.94642857142856"/>
+        </scene>
+    </scenes>
+</document>
