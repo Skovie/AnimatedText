@@ -15,8 +15,9 @@
 		B90126B124AE2DA900C03463 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B90126AF24AE2DA900C03463 /* LaunchScreen.storyboard */; };
 		B90126BC24AE2DA900C03463 /* AnimatedText_ExampleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B90126BB24AE2DA900C03463 /* AnimatedText_ExampleTests.swift */; };
 		B90126C724AE2DA900C03463 /* AnimatedText_ExampleUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B90126C624AE2DA900C03463 /* AnimatedText_ExampleUITests.swift */; };
-		B9B384AF24AE34B700DB478A /* AnimatedText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B9B384AE24AE34B700DB478A /* AnimatedText.framework */; };
-		B9B384B024AE34B700DB478A /* AnimatedText.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B9B384AE24AE34B700DB478A /* AnimatedText.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		B97477CB24B3CACF00F64DF5 /* UILabel+AnimatedText.swift in Sources */ = {isa = PBXBuildFile; fileRef = B97477C824B3CACF00F64DF5 /* UILabel+AnimatedText.swift */; };
+		B97477CC24B3CACF00F64DF5 /* AnimatedTextUITextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B97477C924B3CACF00F64DF5 /* AnimatedTextUITextView.swift */; };
+		B97477CD24B3CACF00F64DF5 /* UITextField+AnimatedText.swift in Sources */ = {isa = PBXBuildFile; fileRef = B97477CA24B3CACF00F64DF5 /* UITextField+AnimatedText.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,7 +44,6 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				B9B384B024AE34B700DB478A /* AnimatedText.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -65,7 +65,9 @@
 		B90126C224AE2DA900C03463 /* AnimatedText_ExampleUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AnimatedText_ExampleUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B90126C624AE2DA900C03463 /* AnimatedText_ExampleUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimatedText_ExampleUITests.swift; sourceTree = "<group>"; };
 		B90126C824AE2DA900C03463 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		B9B384AE24AE34B700DB478A /* AnimatedText.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = AnimatedText.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B97477C824B3CACF00F64DF5 /* UILabel+AnimatedText.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UILabel+AnimatedText.swift"; sourceTree = "<group>"; };
+		B97477C924B3CACF00F64DF5 /* AnimatedTextUITextView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnimatedTextUITextView.swift; sourceTree = "<group>"; };
+		B97477CA24B3CACF00F64DF5 /* UITextField+AnimatedText.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITextField+AnimatedText.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,7 +75,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B9B384AF24AE34B700DB478A /* AnimatedText.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -101,7 +102,6 @@
 				B90126BA24AE2DA900C03463 /* AnimatedText_ExampleTests */,
 				B90126C524AE2DA900C03463 /* AnimatedText_ExampleUITests */,
 				B90126A224AE2DA800C03463 /* Products */,
-				B9B384AD24AE34B700DB478A /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -121,6 +121,7 @@
 				B90126A424AE2DA800C03463 /* AppDelegate.swift */,
 				B90126A624AE2DA800C03463 /* SceneDelegate.swift */,
 				B90126A824AE2DA800C03463 /* ViewController.swift */,
+				B97477CE24B3CAD900F64DF5 /* AnimatedText */,
 				B90126AA24AE2DA800C03463 /* Main.storyboard */,
 				B90126AD24AE2DA900C03463 /* Assets.xcassets */,
 				B90126AF24AE2DA900C03463 /* LaunchScreen.storyboard */,
@@ -147,12 +148,14 @@
 			path = AnimatedText_ExampleUITests;
 			sourceTree = "<group>";
 		};
-		B9B384AD24AE34B700DB478A /* Frameworks */ = {
+		B97477CE24B3CAD900F64DF5 /* AnimatedText */ = {
 			isa = PBXGroup;
 			children = (
-				B9B384AE24AE34B700DB478A /* AnimatedText.framework */,
+				B97477C924B3CACF00F64DF5 /* AnimatedTextUITextView.swift */,
+				B97477C824B3CACF00F64DF5 /* UILabel+AnimatedText.swift */,
+				B97477CA24B3CACF00F64DF5 /* UITextField+AnimatedText.swift */,
 			);
-			name = Frameworks;
+			path = AnimatedText;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -289,7 +292,10 @@
 			files = (
 				B90126A924AE2DA800C03463 /* ViewController.swift in Sources */,
 				B90126A524AE2DA800C03463 /* AppDelegate.swift in Sources */,
+				B97477CB24B3CACF00F64DF5 /* UILabel+AnimatedText.swift in Sources */,
+				B97477CD24B3CACF00F64DF5 /* UITextField+AnimatedText.swift in Sources */,
 				B90126A724AE2DA800C03463 /* SceneDelegate.swift in Sources */,
+				B97477CC24B3CACF00F64DF5 /* AnimatedTextUITextView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

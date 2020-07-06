@@ -4,7 +4,4 @@
    <FileRef
       location = "group:AnimatedText_Example/AnimatedText_Example.xcodeproj">
    </FileRef>
-   <FileRef
-      location = "group:AnimatedText/AnimatedText.xcodeproj">
-   </FileRef>
 </Workspace>
